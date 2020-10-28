@@ -5,11 +5,11 @@
         <tr></tr>
         <tr>
             <th>name</th>
-            <th><%= current_user.name %></th>
+            <th><%= @user.name %></th>
         </tr>
         <tr>
             <th>introduction</th>
-            <th><%= current_user.introduction %></th>
+            <th><%= @user.introduction %></th>
         </tr>
     </tbody>
 </table>
@@ -17,6 +17,7 @@
     <%= link_to "", edit_user_path(current_user),class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
 </div>
 <h2>New Book</h2>
+<%%>
 <%= form_with model:@new_book, local:true do |f|%>
     <div class="field row">
 	    <%= f.label :title, "Title" %><br />
